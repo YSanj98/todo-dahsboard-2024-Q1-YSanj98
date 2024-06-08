@@ -10,15 +10,16 @@ import Elipse5 from "../imgs/Elipses/Ellipse 5.svg";
 
 const GreetingCard: React.FC = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       sx={{
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        marginLeft: isMobile ? "25px" : "350px",
+        marginLeft: isMedium ? "25px" : "350px",
         marginRight: "25px",
+        marginTop: "100px",
         border: "2px solid #D0D5DD",
         borderRadius: "8px",
         backgroundColor: "white",
@@ -41,6 +42,7 @@ const GreetingCard: React.FC = () => {
         >
           Welcome back, John Doe
         </Typography>
+
         <Typography
           variant="body1"
           sx={{
@@ -64,7 +66,7 @@ const GreetingCard: React.FC = () => {
       <Box
         sx={{
           alignItems: "center",
-          paddingBottom: 0,
+          display: "flex",
         }}
       >
         <Box
