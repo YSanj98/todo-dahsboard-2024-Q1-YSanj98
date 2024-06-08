@@ -9,26 +9,25 @@ import {
   Typography,
   useMediaQuery,
   useTheme,
+  Box,
 } from "@mui/material";
-import DashboardIcon from "@mui/icons-material/Dashboard";
+import DashboardICon from "../imgs/dashboard-icon.svg";
 
 const SideNavigation: React.FC = () => {
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <>
-      {!isMobile && (
+      {!isMedium && (
         <Drawer variant="permanent">
           <Toolbar
             sx={{
-              width: "272px", 
+              width: "272px",
               backgroundColor: "#451d5f",
               height: "80px",
             }}
           >
-            {/* <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton> */}
             <Typography
               variant="h6"
               noWrap
@@ -53,7 +52,6 @@ const SideNavigation: React.FC = () => {
             }}
           >
             <ListItem
-              button
               sx={{
                 alignItems: "center",
                 textAlign: "justify",
@@ -68,8 +66,12 @@ const SideNavigation: React.FC = () => {
                   color: "white",
                 }}
               >
-                {/* dashboard icon */}
-                <DashboardIcon />
+                <Box
+                  component="img"
+                  src={DashboardICon}
+                  alt="Dashboard Icon"
+                  sx={{ width: 24, height: 24 }}
+                />
               </ListItemIcon>
               <ListItemText primary="Dashboard" />
             </ListItem>

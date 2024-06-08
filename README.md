@@ -1,30 +1,43 @@
-# React + TypeScript + Vite
+---
+<h1 align="center">Todo Dashboard</h1>
+ 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies that use for the project
 
-Currently, two official plugins are available:
+- Vite
+- React JS
+- Tailwind CSS
+- Typescript
+- Git
+- Daisy UI
+- Vs code
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Setup
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- Clone this repo to your local machine using
+```git
+git clone https://github.com/YSanj98/todo-dahsboard-2024-Q1-YSanj98
 ```
+- after cloning the repository, go to the root directory.
+- install npm packages using the `npm install` command.
+- then the run `npm run dev` command.
+- application will run on http://127.0.0.1:5173/
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+## 🤝 Contributing
+
+Feel free to contribute to this project, If you are willing to learn demanding technologies, get experiences, improve teamwork skills and etc. <br /><br />
+Don't forget to show your love by giving ⭐️to this repo.
+
+## Author
+
+
+👤 **Yasindu Sanjeewa**
+
+-   GitHub: [YSanj98](https://github.com/YSanj98)
+-   LinkedIn: [yasindu_sanjeewa](https://www.linkedin.com/in/yasindu-sanjeewa-a79783202)
+---
+
+

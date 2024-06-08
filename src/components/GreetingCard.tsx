@@ -11,14 +11,17 @@ import Elipse5 from "../imgs/Elipses/Ellipse 5.svg";
 const GreetingCard: React.FC = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
+  
   return (
     <Box
       sx={{
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        marginLeft: isMobile ? "25px" : "350px",
+        marginLeft: isMedium ? "25px" : "350px",
         marginRight: "25px",
+        marginTop: "100px",
         border: "2px solid #D0D5DD",
         borderRadius: "8px",
         backgroundColor: "white",
@@ -41,6 +44,7 @@ const GreetingCard: React.FC = () => {
         >
           Welcome back, John Doe
         </Typography>
+
         <Typography
           variant="body1"
           sx={{
@@ -61,68 +65,70 @@ const GreetingCard: React.FC = () => {
         </Link>
       </Box>
 
-      <Box
-        sx={{
-          alignItems: "center",
-          paddingBottom: 0,
-        }}
-      >
+      {!isMobile && (
         <Box
-          component="img"
-          src={Elipse1}
-          alt="ElipseGroup"
           sx={{
-            width: "20px",
-            height: "20px",
-            top: "26px",
-            left: "889px",
+            alignItems: "center",
+            display: "flex",
           }}
-        />
-        <Box
-          component="img"
-          src={Elipse2}
-          alt="Ellipse2"
-          sx={{
-            top: "83px",
-            left: "1px",
-            width: "66px",
-            height: "66px",
-          }}
-        />
-        <Box
-          component="img"
-          src={Elipse3}
-          alt="Ellipse3"
-          sx={{
-            top: "71px",
-            left: "994px",
-            width: "20px",
-            height: "20px",
-          }}
-        />
-        <Box
-          component="img"
-          src={Elipse4}
-          alt="Ellipse4"
-          sx={{
-            top: "-30px",
-            left: "956px",
-            width: "80px",
-            height: "80px",
-          }}
-        />
-        <Box
-          component="img"
-          src={Elipse5}
-          alt="Ellipse5"
-          sx={{
-            top: "39px",
-            left: "1026px",
-            width: "30px",
-            height: "30px",
-          }}
-        />
-      </Box>
+        >
+          <Box
+            component="img"
+            src={Elipse1}
+            alt="ElipseGroup"
+            sx={{
+              width: "20px",
+              height: "20px",
+              top: "26px",
+              left: "889px",
+            }}
+          />
+          <Box
+            component="img"
+            src={Elipse2}
+            alt="Ellipse2"
+            sx={{
+              top: "83px",
+              left: "1px",
+              width: "66px",
+              height: "66px",
+            }}
+          />
+          <Box
+            component="img"
+            src={Elipse3}
+            alt="Ellipse3"
+            sx={{
+              top: "71px",
+              left: "994px",
+              width: "20px",
+              height: "20px",
+            }}
+          />
+          <Box
+            component="img"
+            src={Elipse4}
+            alt="Ellipse4"
+            sx={{
+              top: "-30px",
+              left: "956px",
+              width: "80px",
+              height: "80px",
+            }}
+          />
+          <Box
+            component="img"
+            src={Elipse5}
+            alt="Ellipse5"
+            sx={{
+              top: "39px",
+              left: "1026px",
+              width: "30px",
+              height: "30px",
+            }}
+          />
+        </Box>
+      )}
     </Box>
   );
 };
