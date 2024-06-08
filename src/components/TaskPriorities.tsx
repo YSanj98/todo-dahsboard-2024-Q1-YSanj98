@@ -1,7 +1,11 @@
-import { Box, Typography, List, ListItemText, ListItem } from "@mui/material";
+import { Box, Typography, List, ListItemText, ListItem, useTheme, useMediaQuery } from "@mui/material";
 import chartImage from "../imgs/chart.svg";
 
 function TaskPriorities() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMedium = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box
       sx={{
@@ -38,13 +42,12 @@ function TaskPriorities() {
             justifyContent: "space-between",
           }}
         >
-         {/* Add a chart image  */}
+         {/* Because of time constraint added a chart image from figma file */}
           <Box
             component="img"
             sx={{
-              height: "auto",
-              width: "100%",
-              maxWidth: "400px",
+              width: !isMobile ? "350px" : isMedium ? "300px" : "350px",
+              height: !isMobile ? "250px" : isMedium ? "200px" : "250px",
             }}
             alt="Task Priorities Chart"
             src={chartImage}

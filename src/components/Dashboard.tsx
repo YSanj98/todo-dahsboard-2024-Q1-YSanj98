@@ -14,7 +14,8 @@ const Dashboard: React.FC = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const isMedium = useMediaQuery(theme.breakpoints.down("md"));
-  const isLessThanXl = useMediaQuery(theme.breakpoints.down("xl"));
+  const isLarge = useMediaQuery(theme.breakpoints.down("lg"));
+  const isXl = useMediaQuery(theme.breakpoints.down("xl"));
 
   return (
     <Box>
@@ -24,14 +25,15 @@ const Dashboard: React.FC = () => {
         sx={{
           display: "block",
           alignItems: "center",
+          justifyContent: "center",
         }}
       >
         <GreetingCard />
         <Box
           sx={{
-            display: isLessThanXl ? "block" : "flex",
+            display: isXl ? "block" : "flex",
             flexDirection: "row",
-            justifyContent: isLessThanXl ? "center" : "space-between",
+            justifyContent: isXl ? "center" : "space-between",
             alignItems: "center",
             marginRight: "25px",
           }}
@@ -41,9 +43,9 @@ const Dashboard: React.FC = () => {
           </TaskProvider>
           <Box
             sx={{
-              display: isMobile ? "block" : isLessThanXl ? "flex" : "block",
-              marginLeft: isMedium ? "25px" : isLessThanXl ? "350px" : "25px",
-              justifyContent: isLessThanXl ? "space-evenly" : "center",
+              display: isMobile ? "block" : isLarge ? "block" : isXl ? "flex" : "block",
+              marginLeft: isMedium ? "25px" : isXl ? "350px" : "25px",
+              justifyContent: isXl ? "space-between" : "center",
               alignItems: "center",
             }}
           >
