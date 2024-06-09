@@ -9,7 +9,7 @@
 - Tailwind CSS
 - Typescript
 - Git
-- Daisy UI
+- Material UI
 - Vs code
 
 
